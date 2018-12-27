@@ -1,0 +1,31 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@*<div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>*@
+
+<!-- unpkg : use the latest version of Video.js -->
+<link href="https://unpkg.com/video.js/dist/video-js.min.css" rel="stylesheet">
+<script src="https://unpkg.com/video.js/dist/video.min.js"></script>
+
+<video id="my-player"
+       class="video-js"
+       controls
+       preload="auto"
+       poster="//vjs.zencdn.net/v/oceans.png"
+       data-setup='{}'>
+    @*<source src="https://media.farsnews.com/Uploaded/Files/Video/1397/10/05/13971005001073_360P.mp4" type="video/mp4">*@
+    <source src="/Video/GetVideoContent" type="video/mp4">
+    <p class="vjs-no-js">
+        To view this video please enable JavaScript, and consider upgrading to a
+        web browser that
+        <a href="http://videojs.com/html5-video-support/" target="_blank">
+            supports HTML5 video
+        </a>
+    </p>
+</video>
